@@ -2,5 +2,5 @@
     Wiggle default settings
 */
 {
-    "wiggle_amount": 0.1
+    "wiggle_amount": 0.05
 }

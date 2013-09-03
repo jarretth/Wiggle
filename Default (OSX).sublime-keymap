@@ -1,11 +1,11 @@
 [
-    { "keys": ["super+m", "up"],    "command": "wiggle", "args": {"direction": "up",   "expand": true} },
-    { "keys": ["super+m", "right"], "command": "wiggle", "args": {"direction": "right","expand": true} },
-    { "keys": ["super+m", "down"],  "command": "wiggle", "args": {"direction": "down", "expand": true} },
-    { "keys": ["super+m", "left"],  "command": "wiggle", "args": {"direction": "left", "expand": true} },
+    { "keys": ["super+m", "super+up"],    "command": "wiggle", "args": {"direction": "up",   "expand": true} },
+    { "keys": ["super+m", "super+right"], "command": "wiggle", "args": {"direction": "right","expand": true} },
+    { "keys": ["super+m", "super+down"],  "command": "wiggle", "args": {"direction": "down", "expand": true} },
+    { "keys": ["super+m", "super+left"],  "command": "wiggle", "args": {"direction": "left", "expand": true} },
 
-    { "keys": ["super+m", "super+up"],    "command": "wiggle", "args": {"direction": "up",   "expand": false} },
-    { "keys": ["super+m", "super+right"], "command": "wiggle", "args": {"direction": "right","expand": false} },
-    { "keys": ["super+m", "super+down"],  "command": "wiggle", "args": {"direction": "down", "expand": false} },
-    { "keys": ["super+m", "super+left"],  "command": "wiggle", "args": {"direction": "left", "expand": false} }
+    { "keys": ["super+m", "up"],    "command": "wiggle", "args": {"direction": "down",   "expand": false} },
+    { "keys": ["super+m", "right"], "command": "wiggle", "args": {"direction": "left","expand": false} },
+    { "keys": ["super+m", "down"],  "command": "wiggle", "args": {"direction": "up", "expand": false} },
+    { "keys": ["super+m", "left"],  "command": "wiggle", "args": {"direction": "right", "expand": false} }
 ]

@@ -1,8 +1,8 @@
 import sublime, sublime_plugin
 
-class WiggleBaseCommand(sublime_plugin.WindowCommand):
-    "Abstract base class for commands."
+settings = sublime.load_settings('Wiggle.sublime-settings')
 
+class WiggleBaseCommand(sublime_plugin.WindowCommand):
     def wiggle(self,direction,expand):
         #todo -
         layout = self.window.get_layout()
@@ -10,36 +10,40 @@ class WiggleBaseCommand(sublime_plugin.WindowCommand):
         if expand:
             multiplier = 1
         else:
-            multiplier = 0
+            multiplier = -1
 
         if direction == "right":
-            item_to_shift = layout["cols"][current_cell[2]]
-        if direction == "left":
-            item_to_shift = layout["cols"][current_cell[0]]
-        if direction == "up":
-            item_to_shift = layout["rows"][current_cell[1]]
-        if direction == "down":
-            item_to_shift = layout["rows"][current_cell[3]]
+            axis = "cols"
+            item = current_cell[2]
+        elif direction == "left":
+            axis = "cols"
+            item = current_cell[0]
+        elif direction == "up":
+            axis = "rows"
+            item = current_cell[1]
+        else:
+            axis = "rows"
+            item = current_cell[3]
 
+        print(axis)
+        print(item)
+
+
+        shift = layout[axis][item]
         if direction in ["up","left"]:
             multiplier *= -1
-            if item_to_shift <= 0.0:
-                multiplier = 0
-        else:
-            if item_to_shift >= 1.0:
-                multiplier = 0
+        if shift in [0.0,1.0]: #don't touch the edges
+            multiplier = 0
 
-        item_to_shift += (.05 * multiplier)#get from settings
-        item_to_shift = min(max(item_to_shift,0.0),1.0)
+        print(layout[axis][item])
+        shift += (settings.get('wiggle_amount') * multiplier)
+        shift = min(max(shift,0.0),1.0)
+        print(shift)
+        print(layout)
 
-        if direction == "right":
-            layout["cols"][current_cell[2]] = item_to_shift
-        if direction == "left":
-            layout["cols"][current_cell[0]] = item_to_shift
-        if direction == "up":
-            layout["rows"][current_cell[1]] = item_to_shift
-        if direction == "down":
-            layout["rows"][current_cell[3]] = item_to_shift
+        layout[axis][item] = shift
+        layout["cols"][0] = 0.0
+        layout["rows"][0] = 0.0
 
         self.window.set_layout(layout)
 

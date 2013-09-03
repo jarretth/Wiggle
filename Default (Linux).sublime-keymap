@@ -1,11 +1,11 @@
 [
-    { "keys": ["ctrl+m", "up"],    "command": "wiggle", "args": {"direction": "up",   "expand": true} },
-    { "keys": ["ctrl+m", "right"], "command": "wiggle", "args": {"direction": "right","expand": true} },
-    { "keys": ["ctrl+m", "down"],  "command": "wiggle", "args": {"direction": "down", "expand": true} },
-    { "keys": ["ctrl+m", "left"],  "command": "wiggle", "args": {"direction": "left", "expand": true} },
+    { "keys": ["ctrl+m", "ctrl+up"],    "command": "wiggle", "args": {"direction": "up",   "expand": true} },
+    { "keys": ["ctrl+m", "ctrl+right"], "command": "wiggle", "args": {"direction": "right","expand": true} },
+    { "keys": ["ctrl+m", "ctrl+down"],  "command": "wiggle", "args": {"direction": "down", "expand": true} },
+    { "keys": ["ctrl+m", "ctrl+left"],  "command": "wiggle", "args": {"direction": "left", "expand": true} },
 
-    { "keys": ["ctrl+m", "ctrl+up"],    "command": "wiggle", "args": {"direction": "up",   "expand": false} },
-    { "keys": ["ctrl+m", "ctrl+right"], "command": "wiggle", "args": {"direction": "right","expand": false} },
-    { "keys": ["ctrl+m", "ctrl+down"],  "command": "wiggle", "args": {"direction": "down", "expand": false} },
-    { "keys": ["ctrl+m", "ctrl+left"],  "command": "wiggle", "args": {"direction": "left", "expand": false} }
+    { "keys": ["ctrl+m", "up"],    "command": "wiggle", "args": {"direction": "down",   "expand": false} },
+    { "keys": ["ctrl+m", "right"], "command": "wiggle", "args": {"direction": "left","expand": false} },
+    { "keys": ["ctrl+m", "down"],  "command": "wiggle", "args": {"direction": "up", "expand": false} },
+    { "keys": ["ctrl+m", "left"],  "command": "wiggle", "args": {"direction": "right", "expand": false} }
 ]
