@@ -1,0 +1,120 @@
+[
+    {
+        "id": "view",
+        "children":
+        [
+            {
+                "caption": "-",
+                "id": "wiggle"
+            },
+            {
+                "caption": "Wiggle",
+                "children":
+                [
+                    {
+                        "caption": "Expand",
+                        "children":
+                        [
+                            { "command": "wiggle", "args": {"direction": "up", "expand":true }, "caption": "Up" },
+                            { "command": "wiggle", "args": {"direction": "down", "expand":true }, "caption": "Down" },
+                            { "command": "wiggle", "args": {"direction": "left", "expand":true }, "caption": "Left" },
+                            { "command": "wiggle", "args": {"direction": "right", "expand":true }, "caption": "Right" }
+                        ]
+                    },
+                    {
+                        "caption": "Shrink",
+                        "children":
+                        [
+                            { "command": "wiggle", "args": {"direction": "up", "expand": false}, "caption": "Up" },
+                            { "command": "wiggle", "args": {"direction": "down", "expand": false}, "caption": "Down" },
+                            { "command": "wiggle", "args": {"direction": "left", "expand": false}, "caption": "Left" },
+                            { "command": "wiggle", "args": {"direction": "right", "expand": false}, "caption": "Right" }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "caption": "Preferences",
+        "mnemonic": "n",
+        "id": "preferences",
+        "children":
+        [
+            {
+                "caption": "Package Settings",
+                "mnemonic": "P",
+                "id": "package-settings",
+                "children":
+                [
+                    {
+                        "caption": "Wiggle",
+                        "children":
+                        [
+                            {
+                                "command": "open_file",
+                                "args": {"file": "${packages}/Wiggle/Wiggle.sublime-settings"},
+                                "caption": "Settings – Default"
+                            },
+                            {
+                                "command": "open_file",
+                                "args": {"file": "${packages}/User/Wiggle.sublime-settings"},
+                                "caption": "Settings – User"
+                            },
+                            { "caption": "-" },
+                            {
+                                "command": "open_file",
+                                "args": {
+                                    "file": "${packages}/Wiggle/Default (OSX).sublime-keymap",
+                                    "platform": "OSX"
+                                },
+                                "caption": "Key Bindings – Default"
+                            },
+                            {
+                                "command": "open_file",
+                                "args": {
+                                    "file": "${packages}/Wiggle/Default (Linux).sublime-keymap",
+                                    "platform": "Linux"
+                                },
+                                "caption": "Key Bindings – Default"
+                            },
+                            {
+                                "command": "open_file",
+                                "args": {
+                                    "file": "${packages}/Wiggle/Default (Windows).sublime-keymap",
+                                    "platform": "Windows"
+                                },
+                                "caption": "Key Bindings – Default"
+                            },
+                            {
+                                "command": "open_file",
+                                "args": {
+                                    "file": "${packages}/User/Default (OSX).sublime-keymap",
+                                    "platform": "OSX"
+                                },
+                                "caption": "Key Bindings – User"
+                            },
+                            {
+                                "command": "open_file",
+                                "args": {
+                                    "file": "${packages}/User/Default (Linux).sublime-keymap",
+                                    "platform": "Linux"
+                                },
+                                "caption": "Key Bindings – User"
+                            },
+                            {
+                                "command": "open_file",
+                                "args": {
+                                    "file": "${packages}/User/Default (Windows).sublime-keymap",
+                                    "platform": "Windows"
+                                },
+                                "caption": "Key Bindings – User"
+                            },
+                            { "caption": "-" }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

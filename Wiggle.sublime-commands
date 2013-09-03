@@ -1,0 +1,11 @@
+[
+	{ "command": "wiggle", "args": {"direction": "up","expand": true}, "caption": "Wiggle: Nudge pane up" },
+	{ "command": "wiggle", "args": {"direction": "right","expand": true}, "caption": "Wiggle: Nudge pane right" },
+	{ "command": "wiggle", "args": {"direction": "down","expand": true}, "caption": "Wiggle: Nudge pane down" },
+	{ "command": "wiggle", "args": {"direction": "left","expand": true}, "caption": "Wiggle: Nudge pane left" },
+
+    { "command": "wiggle", "args": {"direction": "up","expand": false}, "caption": "Wiggle: Shrink pane up" },
+    { "command": "wiggle", "args": {"direction": "right","expand": false}, "caption": "Wiggle: Shrink pane right" },
+    { "command": "wiggle", "args": {"direction": "down","expand": false}, "caption": "Wiggle: Shrink pane down" },
+    { "command": "wiggle", "args": {"direction": "left","expand": false}, "caption": "Wiggle: Shrink pane left" }
+]
